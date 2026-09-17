@@ -1,0 +1,45 @@
+name = "maroon-isles-quest"
+main = "src/index.js"
+compatibility_date = "2026-08-08"
+
+# workers_dev keeps the *.workers.dev hostname reachable as a fallback origin.
+# Adding a [[routes]] custom_domain entry turns it off unless this is set.
+workers_dev = true
+
+# run_worker_first so /api/* reaches the Worker instead of being answered (or
+# 404'd) by the assets layer.
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+# Custom Domain rather than a route: Cloudflare creates the DNS record and the
+# certificate itself.
+# To serve on your own domain, uncomment and change the hostname:
+# [[routes]]
+# pattern = "quest.example.com"
+# custom_domain = true
+
+[[durable_objects.bindings]]
+name = "ROOM"
+class_name = "Room"
+
+# The matchmaker: one instance, holding which rooms exist and who is in them.
+[[durable_objects.bindings]]
+name = "LOBBY"
+class_name = "Lobby"
+
+# One instance, holding a row per finished game for the operator stats.
+[[durable_objects.bindings]]
+name = "STATS"
+class_name = "Stats"
+
+# new_sqlite_classes, not new_classes: the Workers Free plan only allows
+# SQLite-backed Durable Objects.
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Room"]
+
+[[migrations]]
+tag = "v2"
+new_sqlite_classes = ["Lobby", "Stats"]
