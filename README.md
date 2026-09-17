@@ -11,6 +11,14 @@ setting of a classic 1990s adventure game and plays it for laughs ("Hair Today, 
 Tomorrow"). The point is to test a new kind of text adventure. It is not affiliated with
 or endorsed by the owners of the original game.
 
+## Please test before relying on it
+
+This is shared as-is, with no warranty. It works on my own computers, but your system,
+settings and software versions may differ, so please try it in a safe setting first.
+If something doesn't work, you can ask Claude (or another AI coding assistant) to look
+into it, and I'd appreciate hearing what you found and how you fixed it. You are also
+welcome to just let me know at support@veered.org, and I'll look into it.
+
 ## What's new in it
 
 - **A text adventure for two players at once, over the internet.** Classic text
