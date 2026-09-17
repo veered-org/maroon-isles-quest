@@ -1,4 +1,4 @@
-# Maroon: Maroon Isles Quest, a two-player co-op text adventure (parody)
+# Maroon Isles Quest: Two-Player Co-op Text Adventure
 
 *Why Maroon? The deep red of an island adventure.*
 
