@@ -1,4 +1,6 @@
-# Maroon Isles Quest
+# Maroon: Maroon Isles Quest, a two-player co-op text adventure (parody)
+
+*Why Maroon? The deep red of an island adventure.*
 
 **Play it now: [quest.veered.org](https://quest.veered.org)** · more games at [veered.org](https://veered.org)
 
